@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Home Page</title>
+		<title>Our Approach</title>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FPQNTTY8H"></script>
 		<script>
@@ -14,12 +14,12 @@
 
 			gtag('config', 'G-0FPQNTTY8H');
 		</script>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1748895126409"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1748895126409">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1748895126409">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1748895126405"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1748895126405">
+		<link rel="stylesheet" crossorigin="" href="./css/web-development.min.css?v=1748895126405">
+		<link rel="stylesheet" crossorigin="" href="./css/innerhero.min.css?v=1748895126405">
 	</head>
-	<body class="home-page">
+	<body class="our-approach-page">
 		<div class="wrapper">
 			<div data-fls-popup="popup-services" aria-hidden="true" class="popup">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
@@ -209,7 +209,9 @@
 			</div>
 			<header data-fls-header="" data-fls-header-scroll="" class="header">
 				<div class="header__container">
-					<img src="./assets/img/logo.svg" alt="Logo of Critium, featuring a modern design with bold typography and a distinctive color scheme." class="header__logo">
+					<a href="index.html" class="header__logo" aria-label="Go to homepage">
+						<img src="./assets/img/logo.svg" alt="Logo of Critium, featuring a modern design with bold typography and a distinctive color scheme.">
+					</a>
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
@@ -239,134 +241,115 @@
 					</div>
 				</div>
 			</header>
-			<main class="page page--home">
-				<section class="page__hero hero">
-					<div class="hero__container">
-						<div class="hero__body">
-							<div class="hero__content">
-								<h1 class="hero__title title title--big">Software Built on Critical Thinking</h1>
-								<a href="our-approach.html" class="hero__button">
-									our approach
-									<svg aria-hidden="true" focusable="false">
-										<use xlink:href="./assets/img/spritemap.svg#sprite-arrow"></use>
-									</svg>
-								</a>
-							</div>
-							<div class="hero__media">
-								<video src="./assets/img/video.mp4" muted loop autoplay aria-hidden="true" playsinline=""></video>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="page__welcome welcome">
-					<div class="welcome__container">
-						<h2 class="welcome__title title">Welcome to Critum</h2>
-						<div class="welcome__text text text--fw-200">
-							<p>
-								Software development is a dynamic and problem-solving-driven field, and critical thinking plays a key role in various stages of the process. Here’s how we use critical thinking in software development
+			<main class="page page--our-approach">
+				<section data-fls-innerhero="" class="inner-hero">
+					<div class="inner-hero__container">
+						<div class="inner-hero__body">
+							<h1 class="inner-hero__title title">Our Approach</h1>
+							<p class="inner-hero__source">
+								The Company name
+								<span>Critum</span>
+								comes from: root “
+								<span>Crit</span>
+								” in the word “
+								<span>крит</span>
+								ичний” (eng. - critical) and suffix “
+								<span>um</span>
+								” in the word “роз
+								<span>ум</span>
+								” (eng. - mind)
 							</p>
 						</div>
-						<a href="#" class="welcome__link link">Learn more</a>
 					</div>
 				</section>
-				<section class="page__services services">
-					<div class="services__container">
-						<p class="services__label label">Services:</p>
-						<div data-fls-slider="" class="services__slider swiper">
-							<div class="services__wrapper swiper-wrapper">
-								<div class="services__slide swiper-slide">
-									<h3>
-										<a href="#">User Experience Research</a>
-									</h3>
-									<div>
-										<p>Get your research plan, personas, wireframes, prototypes and more</p>
+				<section class="page__steps steps steps--no-counter">
+					<div class="steps__container step">
+						<h2 class="step__title title title--small">
+							<span>Using critical thinking when developing software:</span>
+						</h2>
+						<div class="step__body">
+							<ul class="step__list">
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Understanding the Problem or requirements</h3>
+									<div class="item-step__text text">
+										<p>
+											In the early stages of development, critical thinking helps developers fully understand the requirements or business problem before jumping into coding. This involves asking the right questions, clarifying ambiguous requirements, and thinking through the problem from different angles.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-								<div class="services__slide swiper-slide">
-									<h3>
-										<a href="#">User Interface Design</a>
-									</h3>
-									<div>
-										<p>Incorporate design systems and guidelines for quick workflows</p>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Designing the Solution</h3>
+									<div class="item-step__text text">
+										<p>
+											Developers use critical thinking when designing software architectures, algorithms, and choosing the right technologies. They need to evaluate different design options, consider the scalability, performance, and maintainability of the solution.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-								<div class="services__slide swiper-slide">
-									<h3>
-										<a href="">Native Mobile Development</a>
-									</h3>
-									<div>
-										<p>Incorporate design systems and guidelines for quick workflows</p>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Writing and Debugging code</h3>
+									<div class="item-step__text text">
+										<p>
+											Writing clean and efficient code involves problem-solving, pattern recognition, and logical reasoning. Developers constantly encounter bugs or issues that need to be diagnosed, and critical thinking helps them logically isolate the source of the issue.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-								<div class="services__slide swiper-slide">
-									<h3>
-										<a href="#">Native Mobile Development</a>
-									</h3>
-									<div>
-										<p>Incorporate design systems and guidelines for quick workflows</p>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Testing and Quality Assurance</h3>
+									<div class="item-step__text text">
+										<p>
+											During testing, critical thinking is used to design test cases that cover different scenarios. Testers must also think critically about edge cases and ways the system could fail that were not initially considered.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-								<div class="services__slide swiper-slide">
-									<h3>
-										<a href="#">Web Development</a>
-									</h3>
-									<div>
-										<p>Incorporate design systems and guidelines for quick workflows</p>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Code Review and Collaboration</h3>
+									<div class="item-step__text text">
+										<p>
+											When reviewing other developers' code, critical thinking helps assess the quality, efficiency, and readability of the code. It involves evaluating design decisions, understanding why certain approaches were taken, and suggesting improvements.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-								<div class="services__slide swiper-slide">
-									<h3>
-										<a href="">Product Management</a>
-									</h3>
-									<div>
-										<p>Incorporate design systems and guidelines for quick workflows</p>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Adapting to change and Problem Solving</h3>
+									<div class="item-step__text text">
+										<p>
+											Software development is constantly evolving with new requirements, bugs, and technical constraints. Developers must use critical thinking to evaluate new information and adapt their approach accordingly. Problem-solving skills are critical when dealing with sudden changes or challenges.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-							</div>
-							<div class="swiper-pagination"></div>
-						</div>
-					</div>
-				</section>
-				<section class="page__blog blog">
-					<div class="blog__container">
-						<p class="blog__label label">Blog:</p>
-						<div data-fls-slider="" class="blog__slider swiper">
-							<div class="blog__wrapper swiper-wrapper">
-								<div class="blog__slide swiper-slide">
-									<h3>
-										<a href="#">UX Laws Explained with real world examples</a>
-									</h3>
-									<div>
-										<p>Brief summary of the article here so the user knows something about the read.</p>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Security Measures</h3>
+									<div class="item-step__text text">
+										<p>
+											When developing an application that handles sensitive data, developers must critically analyze the entire system for potential security flaws, such as injection attacks, unauthorized access, and data breaches.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-								<div class="blog__slide swiper-slide">
-									<h3>
-										<a href="#">UX Laws Explained with real world examples</a>
-									</h3>
-									<div>
-										<p>Brief summary of the article here so the user knows something about the read.</p>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Performance and Optimization</h3>
+									<div class="item-step__text text">
+										<p>
+											Developers use critical thinking to identify performance bottlenecks and consider optimization strategies. This involves understanding how different parts of the application interact and impact performance. Analyzing database queries, memory usage, and processing times to optimize them and ensure the system can scale under load.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-								<div class="blog__slide swiper-slide">
-									<h3>
-										<a href="#">UX Laws Explained with real world examples</a>
-									</h3>
-									<div>
-										<p>Brief summary of the article here so the user knows something about the read.</p>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Refactoring and Maintenance</h3>
+									<div class="item-step__text text">
+										<p>
+											Over time, software often requires updates and changes, which may involve refactoring code to improve its structure or adding new features. Critical thinking is necessary to ensure that refactoring doesn’t introduce new problems or inefficiencies.
+										</p>
 									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-							</div>
-							<div class="swiper-pagination"></div>
+								</li>
+								<li class="step__item item-step">
+									<h3 class="item-step__title">Communication</h3>
+									<div class="item-step__text text">
+										<p>
+											Software development often involves collaboration between teams, including developers, project managers, designers, and clients. Critical thinking helps developers communicate complex ideas, evaluate different perspectives, and negotiate solutions effectively.
+										</p>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</section>

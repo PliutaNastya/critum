@@ -196,26 +196,6 @@
   padding-block: 2.5rem;
   background-color: var(--card-bg-color);
 }
-@media (max-height: 60.6em) {
-  .hero__body {
-    padding-block: 2.5rem;
-  }
-}
-@media (max-height: 59.37375em) {
-  .hero__body {
-    padding-block: 1.875rem;
-  }
-}
-@media (max-height: 58.12375em) {
-  .hero__body {
-    padding-block: 1.25rem;
-  }
-}
-@media (max-height: 56.87375em) {
-  .hero__body {
-    padding-block: 0.625rem;
-  }
-}
 @media (max-width: 47.99875em) {
   .hero__container {
     padding-block-start: 8.125rem;
