@@ -314,6 +314,10 @@ function spollers() {
   }
 }
 window.addEventListener("load", spollers);
+const expertiseMenuSpollers = document.querySelector(".submenu__body--expertise");
+if (window.matchMedia("(max-width: 767.98px)").matches) {
+  expertiseMenuSpollers.removeAttribute("data-fls-spollers-open");
+}
 class Popup {
   constructor(options) {
     let config = {
@@ -663,9 +667,12 @@ function headerScroll() {
 }
 document.querySelector("[data-fls-header-scroll]") ? window.addEventListener("load", headerScroll) : null;
 document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.querySelector('[data-fls-popup="popup-form"]');
   const popupInner = document.querySelector('[data-fls-popup="popup-form"] [data-fls-popup-content]');
   const footerForm = document.querySelector(".footer__form");
   const openPopupBtn = document.querySelector('[data-fls-popup-link="popup-form"]');
+  const originalParent = footerForm == null ? void 0 : footerForm.parentElement;
+  const originalNextSibling = footerForm == null ? void 0 : footerForm.nextElementSibling;
   if (popupInner && footerForm && openPopupBtn) {
     openPopupBtn.addEventListener("click", () => {
       setTimeout(() => {
@@ -673,6 +680,28 @@ document.addEventListener("DOMContentLoaded", () => {
         popupInner.appendChild(footerForm);
       }, 50);
     });
+  }
+  const observer = new MutationObserver(() => {
+    const isPopupOpen = popup == null ? void 0 : popup.hasAttribute("data-fls-popup-active");
+    if (!isPopupOpen && !originalParent.contains(footerForm)) {
+      if (originalNextSibling) {
+        originalParent.insertBefore(footerForm, originalNextSibling);
+      } else {
+        originalParent.appendChild(footerForm);
+      }
+    }
+  });
+  if (popup) {
+    observer.observe(popup, { attributes: true, attributeFilter: ["data-fls-popup-active"] });
+  }
+  const navEntries = performance.getEntriesByType("navigation");
+  const isReload = navEntries.length > 0 && navEntries[0].type === "reload";
+  const urlParams = new URLSearchParams(window.location.search);
+  const hasFormParams = urlParams.has("form[email]") || urlParams.has("form[message]");
+  const hash = window.location.hash;
+  if (isReload && hash === "#popup-form" || hasFormParams && hash === "#popup-form") {
+    popup == null ? void 0 : popup.removeAttribute("data-fls-popup-active");
+    history.replaceState(null, "", location.pathname);
   }
 });
 class DynamicAdapt {
