@@ -3,21 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Home Page</title>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FPQNTTY8H"></script>
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
 
-			gtag('config', 'G-0FPQNTTY8H');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-0FPQNTTY8H');
 		</script>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1748895126409"></script>
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home Page</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1748948919018"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1748895126409">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1748895126409">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1748948919018">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1748948919018">
 	</head>
 	<body class="home-page">
 		<div class="wrapper">
@@ -261,7 +264,7 @@
 				<section class="page__welcome welcome">
 					<div class="welcome__container">
 						<h2 class="welcome__title title">Welcome to Critum</h2>
-						<div class="welcome__text text text--fw-200">
+						<div class="welcome__text">
 							<p>
 								Software development is a dynamic and problem-solving-driven field, and critical thinking plays a key role in various stages of the process. Here’s how we use critical thinking in software development
 							</p>
@@ -338,24 +341,6 @@
 						<p class="blog__label label">Blog:</p>
 						<div data-fls-slider="" class="blog__slider swiper">
 							<div class="blog__wrapper swiper-wrapper">
-								<div class="blog__slide swiper-slide">
-									<h3>
-										<a href="#">UX Laws Explained with real world examples</a>
-									</h3>
-									<div>
-										<p>Brief summary of the article here so the user knows something about the read.</p>
-									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
-								<div class="blog__slide swiper-slide">
-									<h3>
-										<a href="#">UX Laws Explained with real world examples</a>
-									</h3>
-									<div>
-										<p>Brief summary of the article here so the user knows something about the read.</p>
-									</div>
-									<a href="#" class="link">Learn more</a>
-								</div>
 								<div class="blog__slide swiper-slide">
 									<h3>
 										<a href="#">UX Laws Explained with real world examples</a>

@@ -3,21 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Mobile App Development</title>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FPQNTTY8H"></script>
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
 
-			gtag('config', 'G-0FPQNTTY8H');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-0FPQNTTY8H');
 		</script>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1748895126397"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1748895126397">
-		<link rel="stylesheet" crossorigin="" href="./css/web-development.min.css?v=1748895126397">
-		<link rel="stylesheet" crossorigin="" href="./css/innerhero.min.css?v=1748895126397">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Mobile App Development</title>
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1748948919003"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1748948919003">
+		<link rel="stylesheet" crossorigin="" href="./css/web-development.min.css?v=1748948919003">
+		<link rel="stylesheet" crossorigin="" href="./css/innerhero.min.css?v=1748948919003">
 	</head>
 	<body class="mobile-page">
 		<div class="wrapper">
@@ -260,68 +263,86 @@
 							<ul class="features__list">
 								<li class="features__item">
 									<h3>MVP Definition</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>Business Requirements</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>Backend Architecture Plan</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>3rd party inegrations overview</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>Design system</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>Prior Risk Assessment</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -659,7 +680,7 @@
 											</svg>
 										</li>
 										<li class="step__item item-step">
-											<h3 class="item-step__title">Graceful Handling of Interruptions:</h3>
+											<h3 class="item-step__title">Graceful Handling of Interruptions</h3>
 											<div class="item-step__text text">
 												<p>
 													Handle incoming calls, messages, and other interruptions properly to provide a seamless experience.
@@ -723,7 +744,7 @@
 											</svg>
 										</li>
 										<li class="step__item item-step">
-											<h3 class="item-step__title">Graceful Handling of Interruptions:</h3>
+											<h3 class="item-step__title">Graceful Handling of Interruptions</h3>
 											<div class="item-step__text text">
 												<p>
 													Handle incoming calls, messages, and other interruptions properly to provide a seamless experience.

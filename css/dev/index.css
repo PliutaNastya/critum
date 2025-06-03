@@ -43,7 +43,8 @@
   min-height: 100svh;
   width: 100vw;
   display: grid;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
 }
 .hero__body {
   position: relative;
@@ -104,6 +105,7 @@
   max-width: 26.375rem;
   width: 100%;
   aspect-ratio: 422/490;
+  object-fit: contain;
 }
 
 @keyframes move-arrow {
@@ -120,6 +122,13 @@
 .welcome__title:not(:last-child) {
   margin-block-end: 1.875rem;
 }
+.welcome__text p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+.welcome__text p:not(:last-child) {
+  margin-block-end: 0.625rem;
+}
 .welcome__text:not(:last-child) {
   margin-block-end: 1.875rem;
 }
@@ -135,6 +144,7 @@
 }
 .services__wrapper {
   margin-block-end: 1.875rem;
+  align-items: flex-start;
 }
 .swiper-slide {
   border-radius: 1.8125rem;
@@ -210,6 +220,11 @@
     margin-inline: -0.9375rem;
   }
 }
+@media (max-width: 29.99875em) {
+  .welcome__text p {
+    font-weight: 200;
+  }
+}
 @media (max-width: 20em) {
   .page__welcome {
     padding-block-start: 3.125rem;
@@ -225,6 +240,9 @@
   }
   .hero__container {
     padding-block-end: 1.25rem;
+  }
+  .welcome__text p {
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 20em) and (max-width: 113.125em) {
@@ -242,6 +260,9 @@
   }
   .hero__container {
     padding-block-end: clamp( 1.25rem , -0.2265100671125rem  +  7.3825503356vw , 8.125rem );
+  }
+  .welcome__text p {
+    font-size: clamp( 1.25rem , 1.22315436241875rem  +  0.1342281879vw , 1.375rem );
   }
 }
 @media (min-width: 47.99875em) and (max-width: 113.125em) {
@@ -276,6 +297,9 @@
   .hero__container {
     padding-block-end: 8.125rem;
   }
+  .welcome__text p {
+    font-size: 1.375rem;
+  }
 }
 @media (any-hover: hover), (pointer: fine) {
   .hero__button:hover {
@@ -286,5 +310,8 @@
   .hero__button:hover svg {
     fill: var(--accent-text-color);
     animation: move-arrow 1.5s infinite;
+  }
+  .swiper-pagination .swiper-pagination-bullet:hover {
+    background-color: var(--accent-bg-1);
   }
 }

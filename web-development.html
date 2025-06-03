@@ -3,21 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Web Development</title>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FPQNTTY8H"></script>
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
 
-			gtag('config', 'G-0FPQNTTY8H');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-0FPQNTTY8H');
 		</script>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1748895126391"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1748895126391">
-		<link rel="stylesheet" crossorigin="" href="./css/web-development.min.css?v=1748895126391">
-		<link rel="stylesheet" crossorigin="" href="./css/innerhero.min.css?v=1748895126391">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Web Development</title>
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1748948918995"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1748948918995">
+		<link rel="stylesheet" crossorigin="" href="./css/web-development.min.css?v=1748948918995">
+		<link rel="stylesheet" crossorigin="" href="./css/innerhero.min.css?v=1748948918995">
 	</head>
 	<body class="webdev-page">
 		<div class="wrapper">
@@ -258,68 +261,86 @@
 							<ul class="features__list">
 								<li class="features__item">
 									<h3>B2B Saas</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>AI-Powered integrations</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>Cloud Security</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>Data Dashboards and visualization</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>Design system</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 								<li class="features__item">
 									<h3>Frontend / Backend</h3>
-									<button class="features__info-button" aria-label="Show more information">
-										<svg class="info-icon" role="img" aria-hidden="true" focusable="false">
-											<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
-										</svg>
-									</button>
-									<div class="info-details">
-										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+									<div class="features__tooltip tooltip">
+										<button class="tooltip__button" aria-label="Show more information">
+											<svg class="tooltip__icon info-icon" role="img" aria-hidden="true" focusable="false">
+												<use xlink:href="./assets/img/spritemap.svg#sprite-info"></use>
+											</svg>
+										</button>
+										<div class="tooltip__content">
+											<p>Lorem ipsum dolor sit amet.</p>
+											<p>Lorem ipsum dolor sit amet.</p>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -553,7 +574,7 @@
 											<h3 class="item-step__title">Modularize code</h3>
 											<div class="item-step__text text">
 												<p>
-													we break down your code into reusable components, especially in JavaScript and CSS. Tools like React, Vue, or SASS can help achieve this
+													We break down your code into reusable components, especially in JavaScript and CSS. Tools like React, Vue, or SASS can help achieve this
 												</p>
 											</div>
 											<button class="item-step__info" aria-label="Show more information">
@@ -566,7 +587,7 @@
 											<h3 class="item-step__title">Keep Logic Separate</h3>
 											<div class="item-step__text text">
 												<p>
-													keep business logic, presentation logic, and data management separate to improve maintainability and scalability
+													Keep business logic, presentation logic, and data management separate to improve maintainability and scalability
 												</p>
 											</div>
 											<svg class="info-icon" aria-hidden="true" focusable="false">

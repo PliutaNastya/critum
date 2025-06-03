@@ -1008,3 +1008,35 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
+const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+if (isTouchDevice) {
+  const tooltipBtns = document.querySelectorAll(".tooltip__button");
+  if (tooltipBtns.length) {
+    tooltipBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const tooltip = btn.nextElementSibling;
+        const isVisible = tooltip.classList.contains("tooltip-show");
+        const visibleTooltipsList = document.querySelectorAll(".tooltip-show");
+        if (visibleTooltipsList.length) {
+          visibleTooltipsList.forEach((el) => {
+            if (el !== tooltip) el.classList.remove("tooltip-show");
+          });
+        }
+        if (!isVisible) {
+          tooltip.classList.toggle("tooltip-show");
+          const closeTooltip = function(event) {
+            if (!btn.contains(event.target) && !tooltip.contains(event.target)) {
+              tooltip.classList.remove("tooltip-show");
+              document.removeEventListener("click", closeTooltip);
+            }
+          };
+          setTimeout(() => {
+            document.addEventListener("click", closeTooltip);
+          }, 0);
+        } else {
+          tooltip.classList.remove("tooltip-show");
+        }
+      });
+    });
+  }
+}
