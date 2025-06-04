@@ -901,7 +901,7 @@ body::after {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 1rem;
-    padding-inline: 0.9375rem;
+    padding-inline: 1.5625rem;
   }
   .menu__body {
     position: fixed;
