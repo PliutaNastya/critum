@@ -204,22 +204,31 @@
   padding-block: 2.5rem;
   background-color: var(--card-bg-color);
 }
-@media (max-width: 106.875em) and (min-width: 106.875em) {
+@media (max-width: 106.875em) {
   .hero__container {
+    padding-block-start: 7.9375rem;
     padding-block-end: 3.125rem;
   }
+  .hero__media video {
+    max-width: 30rem;
+  }
 }
-@media (max-width: 106.875em) and (max-width: 20em) {
+@media (max-width: 100em) and (min-width: 106.875em) {
+  .hero__container {
+    padding-block-end: 0.625rem;
+  }
+}
+@media (max-width: 100em) and (max-width: 20em) {
   .hero__container {
     padding-block-end: 6.25e-8rem;
   }
 }
-@media (max-width: 106.875em) {
+@media (max-width: 100em) {
   .hero__container {
-    padding-block-start: 7.9375rem;
+    padding-block-start: 5.9375rem;
   }
   .hero__media video {
-    max-width: 30rem;
+    max-width: 27.5rem;
   }
 }
 @media (max-width: 47.99875em) {
@@ -271,9 +280,9 @@
     font-size: 1.28125rem;
   }
 }
-@media (max-width: 106.875em) and (min-width: 20em) and (max-width: 106.875em) {
+@media (max-width: 100em) and (min-width: 20em) and (max-width: 106.875em) {
   .hero__container {
-    padding-block-end: clamp( 6.25e-8rem , -0.71942438354375rem  +  3.5971222302vw , 3.125rem );
+    padding-block-end: clamp( 6.25e-8rem , -0.1438848152rem  +  0.7194243885vw , 0.625rem );
   }
 }
 @media (min-width: 20em) and (max-width: 106.875em) {

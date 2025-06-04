@@ -753,7 +753,7 @@ if (document.querySelector("[data-fls-dynamic]")) {
   window.addEventListener("load", () => new DynamicAdapt());
 }
 document.addEventListener("DOMContentLoaded", () => {
-  const popup = document.querySelector('[data-fls-popup="popup-form"]');
+  const popupForm = document.querySelector('[data-fls-popup="popup-form"]');
   const popupInner = document.querySelector('[data-fls-popup="popup-form"] [data-fls-popup-content]');
   const footerForm = document.querySelector(".footer__body");
   const openPopupBtn = document.querySelector('[data-fls-popup-link="popup-form"]');
@@ -768,7 +768,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   const observer = new MutationObserver(() => {
-    const isPopupOpen = popup == null ? void 0 : popup.hasAttribute("data-fls-popup-active");
+    const isPopupOpen = popupForm == null ? void 0 : popupForm.hasAttribute("data-fls-popup-active");
     if (!isPopupOpen && !originalParent.contains(footerForm)) {
       if (originalNextSibling) {
         originalParent.insertBefore(footerForm, originalNextSibling);
@@ -777,8 +777,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-  if (popup) {
-    observer.observe(popup, { attributes: true, attributeFilter: ["data-fls-popup-active"] });
+  if (popupForm) {
+    observer.observe(popupForm, { attributes: true, attributeFilter: ["data-fls-popup-active"] });
   }
   const navEntries = performance.getEntriesByType("navigation");
   const isReload = navEntries.length > 0 && navEntries[0].type === "reload";
@@ -786,7 +786,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hasFormParams = urlParams.has("form[email]") || urlParams.has("form[message]");
   const hash = window.location.hash;
   if (isReload && hash === "#popup-form" || hasFormParams && hash === "#popup-form") {
-    popup == null ? void 0 : popup.removeAttribute("data-fls-popup-active");
+    popupForm == null ? void 0 : popupForm.removeAttribute("data-fls-popup-active");
     history.replaceState(null, "", location.pathname);
   }
   const contactForm = document.getElementById("contactForm");
@@ -825,23 +825,25 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         form.reset();
         submitButton.setAttribute("disabled", true);
+        popupForm == null ? void 0 : popupForm.removeAttribute("data-fls-popup-active");
+        document.documentElement.removeAttribute("data-fls-popup-open");
       }
     });
   }
   const allPopups = document.querySelectorAll("[data-fls-popup]");
-  allPopups.forEach((popup2) => {
-    const popupName = popup2.getAttribute("data-fls-popup");
+  allPopups.forEach((popup) => {
+    const popupName = popup.getAttribute("data-fls-popup");
     const popupTrigger = document.querySelector(`[data-fls-popup-link="${popupName}"]`);
     if (popupTrigger) {
       const observer2 = new MutationObserver(() => {
-        const isActive = popup2.hasAttribute("data-fls-popup-active");
+        const isActive = popup.hasAttribute("data-fls-popup-active");
         if (isActive) {
           popupTrigger.classList.add("--active");
         } else {
           popupTrigger.classList.remove("--active");
         }
       });
-      observer2.observe(popup2, { attributes: true, attributeFilter: ["data-fls-popup-active"] });
+      observer2.observe(popup, { attributes: true, attributeFilter: ["data-fls-popup-active"] });
     }
   });
 });
