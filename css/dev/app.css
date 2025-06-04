@@ -863,7 +863,7 @@ body::after {
   }
   .features__body {
     background-color: var(--light-bg);
-    margin-inline: -0.9375rem;
+    margin-inline: -1.875rem;
   }
   .features__item {
     padding-inline: 0.9375rem;
