@@ -762,19 +762,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageInput = document.getElementById("message");
   const submitButton = document.querySelector(".form__button");
   if (contactForm && emailInput && messageInput && submitButton) {
-    let checkInputs2 = function() {
+    let updateButtonState2 = function() {
       const email = emailInput.value.trim();
       const message = messageInput.value.trim();
-      if (email.length && message.length) {
-        submitButton.removeAttribute("disabled");
+      if (email.length > 0 && message.length > 0) {
+        submitButton.classList.add("--form-btn-active");
       } else {
-        submitButton.setAttribute("disabled", true);
+        submitButton.classList.remove("--form-btn-active");
       }
+    }, showError2 = function(form) {
+      const oldError = form.querySelector(".form__error");
+      if (oldError) oldError.remove();
+      const errorDiv = document.createElement("div");
+      errorDiv.className = "form__error";
+      errorDiv.style.cssText = "color: #E6343E; text-decoration: underline; line-height: 1.2; transform: translateY(20px);";
+      errorDiv.innerHTML = `<b>Oops!</b> Please enter your <b>email</b> and write a <b>message</b>`;
+      form.insertBefore(errorDiv, submitButton);
     };
-    var checkInputs = checkInputs2;
-    submitButton.setAttribute("disabled", true);
-    emailInput.addEventListener("input", checkInputs2);
-    messageInput.addEventListener("input", checkInputs2);
+    var updateButtonState = updateButtonState2, showError = showError2;
+    emailInput.addEventListener("input", updateButtonState2);
+    messageInput.addEventListener("input", updateButtonState2);
     contactForm.addEventListener("submit", function(e) {
       e.preventDefault();
       const email = emailInput.value.trim();
@@ -784,15 +791,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const oldError = form.querySelector(".form__error");
       if (oldError) oldError.remove();
       if (!emailRegex.test(email) || message.length === 0) {
-        const errorDiv = document.createElement("div");
-        errorDiv.className = "form__error";
-        errorDiv.style.cssText = "color: #E6343E; text-decoration: underline;line-height: 1.2;transform: translateY(20px);";
-        errorDiv.innerHTML = `<b>Oops!</b> Please enter your <b>email</b> and write a <b>message</b>`;
-        form.insertBefore(errorDiv, submitButton);
-        submitButton.setAttribute("disabled", true);
+        showError2(form);
       } else {
         form.reset();
-        submitButton.setAttribute("disabled", true);
+        submitButton.classList.remove("--form-btn-active");
         popupForm == null ? void 0 : popupForm.removeAttribute("data-fls-popup-active");
         document.documentElement.removeAttribute("data-fls-popup-open");
       }
