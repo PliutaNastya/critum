@@ -44,7 +44,6 @@
 }
 
 .hero__container {
-  max-width: 103.125rem;
   width: 100vw;
   display: grid;
   align-items: center;
@@ -53,7 +52,7 @@
 .hero__body {
   position: relative;
   min-height: 61.851852%;
-  padding-block: 1.25rem;
+  padding-block: 0.625rem;
   display: grid;
   align-items: center;
   gap: 1.875rem;
