@@ -338,7 +338,7 @@ body::before {
 .header {
   position: relative;
   z-index: 150;
-  padding-block-start: 4.6875rem;
+  padding-block-start: 6.5625rem;
   padding-block-end: 0.625rem;
 }
 .header__container {

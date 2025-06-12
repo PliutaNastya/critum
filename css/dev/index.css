@@ -46,13 +46,13 @@
 .hero__container {
   width: 100vw;
   display: grid;
-  align-items: center;
-  justify-content: center;
 }
 .hero__body {
+  align-self: start;
   position: relative;
   min-height: 61.851852%;
   padding-block: 0.625rem;
+  margin-block-start: 6.25rem;
   display: grid;
   align-items: center;
   gap: 1.875rem;
@@ -105,9 +105,9 @@
   pointer-events: none;
 }
 .hero__media video {
-  max-width: 30rem;
+  max-width: 34.375rem;
   width: 100%;
-  aspect-ratio: 480/558;
+  aspect-ratio: 550/639;
   object-fit: cover;
 }
 
@@ -350,7 +350,7 @@
     padding-block-start: 3.75rem;
   }
   .hero__content {
-    margin-block-start: -4.375rem;
+    margin-block-start: -1.875rem;
   }
   .hero__title {
     font-size: 5.5rem;
