@@ -104,9 +104,9 @@
   justify-content: center;
 }
 .hero__media video {
-  max-width: 34.375rem;
+  max-width: 30rem;
   width: 100%;
-  aspect-ratio: 550/639;
+  aspect-ratio: 480/558;
   object-fit: cover;
 }
 
@@ -212,9 +212,6 @@
   .hero__container {
     padding-block-start: 7.9375rem;
     padding-block-end: 3.125rem;
-  }
-  .hero__media video {
-    max-width: 30rem;
   }
 }
 @media (max-width: 100em) and (min-width: 106.875em) {
@@ -363,7 +360,7 @@
 @media (min-width: 112.5em) {
   .hero__container {
     padding-block-start: 11.6875rem;
-    padding-block-end: 6.25rem;
+    padding-block-end: 2.5rem;
   }
 }
 @media (any-hover: hover), (pointer: fine) {

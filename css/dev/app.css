@@ -338,7 +338,7 @@ body::before {
 .header {
   position: relative;
   z-index: 150;
-  padding-block-start: 6.5625rem;
+  padding-block-start: 4.6875rem;
   padding-block-end: 0.625rem;
 }
 .header__container {
@@ -837,11 +837,6 @@ body::after {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-}
-@media (max-width: 112.5em){
-  .header {
-    padding-block-start: 5rem;
-  }
 }
 @media (max-width: 106.875em){
   .header {
