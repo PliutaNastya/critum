@@ -102,12 +102,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 .hero__media video {
   max-width: 30rem;
   width: 100%;
   aspect-ratio: 480/558;
   object-fit: cover;
+}
+
+.video-finished {
+  pointer-events: none;
 }
 
 @keyframes move-arrow {

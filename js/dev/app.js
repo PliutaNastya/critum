@@ -907,6 +907,8 @@ if (video) {
   video.addEventListener("ended", () => {
     video.pause();
     video.currentTime = video.duration;
+    video.removeAttribute("autoplay");
+    video.classList.add("video-finished");
   });
 }
 function autoResize(textarea2) {
