@@ -817,10 +817,19 @@ document.addEventListener("DOMContentLoaded", () => {
       successDiv.className = "form__success";
       successDiv.innerText = message;
       formBody.appendChild(successDiv);
+    }, removeSuccessMessage2 = function() {
+      const successMessage = contactForm.querySelector(".form__success");
+      if (successMessage) successMessage.remove();
     };
-    var updateButtonState = updateButtonState2, showError = showError2, showSuccess = showSuccess2;
-    emailInput.addEventListener("input", updateButtonState2);
-    messageInput.addEventListener("input", updateButtonState2);
+    var updateButtonState = updateButtonState2, showError = showError2, showSuccess = showSuccess2, removeSuccessMessage = removeSuccessMessage2;
+    emailInput.addEventListener("input", () => {
+      updateButtonState2();
+      removeSuccessMessage2();
+    });
+    messageInput.addEventListener("input", () => {
+      updateButtonState2();
+      removeSuccessMessage2();
+    });
     contactForm.addEventListener("submit", function(e) {
       e.preventDefault();
       const email = emailInput.value.trim();
@@ -829,6 +838,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const form = this;
       const oldError = form.querySelector(".form__error");
       if (oldError) oldError.remove();
+      const oldSuccess = form.querySelector(".form__success");
+      if (oldSuccess) oldSuccess.remove();
       if (email.length === 0 && message.length === 0) {
         showError2(form, "Please enter your email and write a message");
       } else if (email.length === 0) {
