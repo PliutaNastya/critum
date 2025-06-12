@@ -69,6 +69,11 @@
   height: 100%;
   z-index: -1;
 }
+.hero__title {
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: -0.0625rem;
+}
 .hero__button {
   display: inline-flex;
   align-items: center;
@@ -272,6 +277,9 @@
   .page__services {
     padding-block-start: 3.125rem;
   }
+  .hero__title {
+    font-size: 2.25rem;
+  }
   .hero__title:not(:last-child) {
     margin-block-end: 6.25e-8rem;
   }
@@ -293,6 +301,9 @@
   }
   .page__services {
     padding-block-start: clamp( 3.125rem , 2.9811151079125rem  +  0.7194244604vw , 3.75rem );
+  }
+  .hero__title {
+    font-size: clamp( 2.25rem , 1.50179856115rem  +  3.7410071942vw , 5.5rem );
   }
   .hero__title:not(:last-child) {
     margin-block-end: clamp( 6.25e-8rem , -0.71942438354375rem  +  3.5971222302vw , 3.125rem );
@@ -338,6 +349,9 @@
   }
   .hero__content {
     margin-block-start: -4.375rem;
+  }
+  .hero__title {
+    font-size: 5.5rem;
   }
   .hero__title:not(:last-child) {
     margin-block-end: 3.125rem;

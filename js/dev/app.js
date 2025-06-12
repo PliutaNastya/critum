@@ -808,10 +808,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (oldError) oldError.remove();
       const errorDiv = document.createElement("div");
       errorDiv.className = "form__error";
-      errorDiv.innerHTML = `Oops! ${message}`;
+      errorDiv.innerText = `Oops! ${message}`;
       formBody.appendChild(errorDiv);
+    }, showSuccess2 = function(form, message) {
+      const oldSuccess = form.querySelector(".form__success");
+      if (oldSuccess) oldSuccess.remove();
+      const successDiv = document.createElement("div");
+      successDiv.className = "form__success";
+      successDiv.innerText = message;
+      formBody.appendChild(successDiv);
     };
-    var updateButtonState = updateButtonState2, showError = showError2;
+    var updateButtonState = updateButtonState2, showError = showError2, showSuccess = showSuccess2;
     emailInput.addEventListener("input", updateButtonState2);
     messageInput.addEventListener("input", updateButtonState2);
     contactForm.addEventListener("submit", function(e) {
@@ -833,9 +840,17 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         form.reset();
         submitButton.classList.remove("--form-btn-active");
-        popupForm == null ? void 0 : popupForm.removeAttribute("data-fls-popup-active");
-        document.documentElement.removeAttribute("data-fls-popup-open");
+        showSuccess2(form, "Thank you for your email. We’ll get back to you as soon as possible");
       }
+    });
+    const buttonOpenPopupForm = document.querySelector('[data-fls-popup-link="popup-form"]');
+    buttonOpenPopupForm.addEventListener("click", () => {
+      var _a, _b;
+      (_a = contactForm == null ? void 0 : contactForm.querySelector(".form__error")) == null ? void 0 : _a.remove();
+      (_b = contactForm == null ? void 0 : contactForm.querySelector(".form__success")) == null ? void 0 : _b.remove();
+      emailInput.value = "";
+      messageInput.value = "";
+      updateButtonState2();
     });
   }
   const allPopups = document.querySelectorAll("[data-fls-popup]");
